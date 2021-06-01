@@ -13,3 +13,11 @@ Plate
 Negative
 
 <img src="negative.jpg" width="200" height="200">
+
+## Preprocessing 
+Following preprocessing techniques are used before training and inference on the test data:
+1. Images are resized into fix shape
+2. Gaussian filter is applied on resized image to the point where our object is still visible through naked eye
+
+## Model training
+Pre-trained Inception Network is used to extract features from video frames. A fully-connected layer based on number of classes i.e. 3 is used at the end and network is trained on augmented data
